@@ -8,7 +8,7 @@ const BlogCard = ({ blog, deletable, handleDelete }) => {
 
     return (
         <div className="max-w-sm my-10 mx-auto transition border-2 p-2 hover:scale-105 border-opacity-30 border-primary hover:border-secondary group hover:no-underline focus:no-underline relative">
-            <Link to={`/blog/${blog.id}`}>
+            <Link to={`/blog-details/${blog.id}`}>
                 <img
                     role='presentation'
                     className='object-cover w-full rounded h-44'

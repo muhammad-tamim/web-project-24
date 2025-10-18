@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import BlogCard from '../features/blogs/components/BlogCard';
-import { deleteBlog, getBlogs } from '../shared/utils/utils';
 import EmptyState from '../shared/components/ui/EmptyState';
+import { getBlogs } from '../shared/utils/getBlogsFromLocalStorage';
+import { deleteBlog } from '../shared/utils/deleteBlogFromLocalStorage';
 
 const BookmarksPage = () => {
     const [blogs, setBlogs] = useState([])

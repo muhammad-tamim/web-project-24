@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MdBookmarkAdd } from 'react-icons/md';
 import { Link, Outlet, useLoaderData } from 'react-router';
-import { saveBlog } from '../shared/utils/utils';
+import { saveBlog } from '../shared/utils/saveBlogToLocalStorage';
 
 const BlogDetailsPage = () => {
     const [tabIndex, setTabIndex] = useState(0)

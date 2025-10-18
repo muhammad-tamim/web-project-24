@@ -4,7 +4,7 @@ import wave from '../assets/images/wave.svg'
 
 const HomePage = () => {
     return (
-        <div className='flex relative flex-col items-center justify-center min-h-[calc(100vh-52px)]'>
+        <div className='flex relative flex-col items-center justify-center min-h-[calc(100vh-120px)]'>
             <Hero></Hero>
             <img className='absolute bottom-0 w-full' src={wave} alt="" />
         </div>

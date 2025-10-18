@@ -6,8 +6,10 @@ import Footer from '../../shared/components/structure/Footer';
 const MainLayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <div className='min-h-[calc(100vh-52px)]'>
+            <div className='h-16'>
+                <Navbar></Navbar>
+            </div>
+            <div className='min-h-[calc(100vh-120px)]'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
