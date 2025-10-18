@@ -4,6 +4,8 @@
 
 ByteBlaze is a tech blogs website that I created to practice core React Router concepts. I use the dev.to API to load the most popular blogs, and then implement key React Router features such as routing, dynamic routing, nested routing, data loading etc.
 
+https://github.com/user-attachments/assets/6f995d35-b49d-40a0-a256-3095b1bb41b6
+
 ## Live Site Link:
 
 https://web-project-24.netlify.app/
