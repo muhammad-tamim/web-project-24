@@ -102,6 +102,38 @@ https://loading.io/background/m-wave/
 </path><g data-idx="15"></g></g><text data-watermark="true" text-anchor="middle" dominant-baseline="middle" stroke-opacity="0.1" fill="black" fill-opacity="0.1" stroke="white" stroke-width="1" font-size="15.0" x="800.0" y="390.5" data-idx="16" style="opacity: 1; font-size: 15px;">LOADING.IO</text></svg>
 ```
 
+3. How to make a animated gradient text with tailwindcss
+
+```jsx
+<span
+  className="text-2xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient"
+>
+  My gradient text
+</span>
+```
+
+```css
+/* index.css */
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  -moz-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+```
+
 ## Contact With Me: 
 
 tamim.muhammad2005@gmail.com | +8801586090360 (WhatsApp)  
