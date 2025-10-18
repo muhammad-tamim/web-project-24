@@ -134,6 +134,57 @@ https://loading.io/background/m-wave/
 }
 ```
 
+4. For the dynamic page we have to add a extra Backslash on the Link or NavLink:
+
+```
+import React from 'react';
+import { Link } from 'react-router';
+import placeholderImage from '../../../assets/images/404.jpg'
+
+const BlogCard = ({ blog }) => {
+    const { cover_image, title, description, published_at, id } = blog || {}
+    return (
+        <Link to={`/blog-details/${id}`} className="max-w-sm mx-auto group transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30 rounded-md hover:no-underline focus:no-underline dark:bg-gray-50">
+            <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src={cover_image || placeholderImage} />
+            <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{title}</h3>
+                <span className="text-xs dark:text-gray-600"> {new Date(published_at).toLocaleDateString()}</span>
+                <p>{description}</p>
+            </div>
+        </Link>
+    );
+};
+
+export default BlogCard;
+```   
+
+if we don't add the backslash our routes will look like this: 
+
+```jsx
+import React from 'react';
+import { Link } from 'react-router';
+import placeholderImage from '../../../assets/images/404.jpg'
+
+const BlogCard = ({ blog }) => {
+    const { cover_image, title, description, published_at, id } = blog || {}
+    return (
+        <Link to={`blog-details/${id}`} className="max-w-sm mx-auto group transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30 rounded-md hover:no-underline focus:no-underline dark:bg-gray-50">
+            <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src={cover_image || placeholderImage} />
+            <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{title}</h3>
+                <span className="text-xs dark:text-gray-600"> {new Date(published_at).toLocaleDateString()}</span>
+                <p>{description}</p>
+            </div>
+        </Link>
+    );
+};
+
+export default BlogCard;
+```
+
+![images](/src/assets/readme-images/dynamic-page.png)
+
+
 ## Contact With Me: 
 
 tamim.muhammad2005@gmail.com | +8801586090360 (WhatsApp)  
